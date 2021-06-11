@@ -28,6 +28,13 @@
   --placeholder-color: #b5b1b1;
 }
 
+html {
+  font-size: var(--font-size);
+}
+
 body {
   margin: 0;
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
 }
