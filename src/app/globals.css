@@ -11,6 +11,15 @@
 
   /* SIZES */
   font-size: 100%;
+
+  /* COLORS */
+  --primary-color: #28bcab;
+  --secondary-color: #fdeab4;
+  --primary-text-color: #964b00;
+  --secondary-text-color: #57524e;
+  --hint-color: #9e4ae3;
+  --background-color: #fff;
+  --placeholder-color: #b5b1b1;
 }
 
 body {
