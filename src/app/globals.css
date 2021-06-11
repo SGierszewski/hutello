@@ -1,13 +1,45 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap");
+@font-face {
+  font-family: soupOfJustice;
+  src: "/assets/fonts/soupofjustice.ttf";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  /* FONTS */
+  --primary-font-family: "Roboto", sans-serif;
+  --secondary-font-family: "soupOfJustice";
+
+  /* SIZES */
+  font-size: 100%;
+
+  /* COLORS */
+  --primary-color: #28bcab;
+  --secondary-color: #fdeab4;
+  --primary-text-color: #964b00;
+  --secondary-text-color: #57524e;
+  --hint-color: #9e4ae3;
+  --background-color: #fff;
+  --placeholder-color: #b5b1b1;
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  margin: 0;
+  font-family: var(--primary-font-family);
+  color: var(--primary-text-color);
+  background-color: var(--background-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
