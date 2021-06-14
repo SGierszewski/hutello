@@ -3,7 +3,7 @@ import styles from "./LabeledInput.module.css";
 
 type LabeledInputProps = {
   label: string;
-  // value: string;
+  value: string;
   type?: string;
   required?: boolean;
   onChange: (value: string) => void;
@@ -11,7 +11,7 @@ type LabeledInputProps = {
 
 function LabeledInput({
   label,
-  // value,
+  value,
   type,
   required,
   onChange,
@@ -22,7 +22,7 @@ function LabeledInput({
       <input
         className={styles.container__input}
         type={type}
-        // value={value}
+        value={value}
         required={required}
         onChange={(event) => onChange(event.target.value)}
       />

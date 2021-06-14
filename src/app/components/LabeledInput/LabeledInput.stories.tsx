@@ -9,7 +9,7 @@ export default {
 export const email = (): JSX.Element => (
   <LabeledInput
     label="Email address"
-    // value=""
+    value=""
     type="email"
     required={true}
     onChange={console.log}
@@ -19,7 +19,7 @@ export const email = (): JSX.Element => (
 export const password = (): JSX.Element => (
   <LabeledInput
     label="Password"
-    // value=""
+    value=""
     type="password"
     required={true}
     onChange={console.log}
@@ -29,7 +29,7 @@ export const password = (): JSX.Element => (
 export const firstName = (): JSX.Element => (
   <LabeledInput
     label="First name"
-    // value=""
+    value=""
     type=""
     required={true}
     onChange={console.log}
