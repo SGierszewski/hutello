@@ -1,0 +1,22 @@
+.container {
+  display: grid;
+}
+
+.container__label {
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 0 0 0.2em 0.5em;
+}
+
+.container__input {
+  background-color: var(--secondary-color);
+  color: var(--secondary-text-color);
+  border: none;
+  border-radius: 0.5em;
+  height: 2em;
+  padding-left: 0.5em;
+}
+
+.container__input:focus {
+  outline-color: var(--primary-color);
+}
