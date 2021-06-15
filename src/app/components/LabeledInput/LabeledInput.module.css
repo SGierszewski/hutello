@@ -1,11 +1,8 @@
-.container {
-  display: grid;
-}
-
 .container__label {
   font-size: 0.8em;
-  font-weight: 300;
-  padding: 0 0 0.2em 0.5em;
+  font-weight: 400;
+  padding-left: 0.8em;
+  padding-bottom: 0.2em;
 }
 
 .container__input {
@@ -13,8 +10,9 @@
   color: var(--secondary-text-color);
   border: none;
   border-radius: 0.5em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   padding-left: 0.5em;
+  width: 100%;
 }
 
 .container__input:focus {
