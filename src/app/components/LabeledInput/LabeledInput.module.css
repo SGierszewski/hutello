@@ -13,7 +13,7 @@
   color: var(--secondary-text-color);
   border: none;
   border-radius: 0.5em;
-  height: 2em;
+  font-size: 1.5em;
   padding-left: 0.5em;
 }
 
