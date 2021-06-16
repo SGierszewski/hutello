@@ -2,14 +2,7 @@ import React from "react";
 
 function LogoIcon(): JSX.Element {
   return (
-    <svg
-      id="hutello-logo"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="211"
-      height="207"
-      viewBox="0 0 211 207"
-    >
+    <svg width="211" height="207" viewBox="0 0 211 207">
       <defs>
         <pattern
           id="pattern"
@@ -25,7 +18,7 @@ function LogoIcon(): JSX.Element {
           />
         </pattern>
       </defs>
-      <rect id="dog_head" width="211" height="207" fill="url(#pattern)" />
+      <rect width="211" height="207" fill="url(#pattern)" />
     </svg>
   );
 }
