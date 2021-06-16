@@ -1,0 +1,15 @@
+.button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em 0.8em;
+  box-shadow: 0.5px 0.5px 3px #888;
+}
+
+.button__title {
+  font-family: var(--primary-font-family);
+  font-size: 1.4em;
+  font-weight: 600;
+  padding-left: 0.5em;
+}
