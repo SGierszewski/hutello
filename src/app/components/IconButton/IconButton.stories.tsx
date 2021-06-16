@@ -1,8 +1,4 @@
 import React from "react";
-import PwResetIcon from "../Icons/PwResetIcon";
-import RequestIcon from "../Icons/RequestIcon";
-import SearchIcon from "../Icons/SearchIcon";
-import UserIcon from "../Icons/UserIcon";
 import IconButton from "./IconButton";
 
 export default {
@@ -11,25 +7,55 @@ export default {
 };
 
 export const loginButton = (): JSX.Element => (
-  <IconButton icon={<UserIcon />} title="Login" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="login"
+  />
 );
 
 export const signUpButton = (): JSX.Element => (
-  <IconButton icon={<UserIcon />} title="Sign up" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="signUp"
+  />
 );
 
 export const pwResetButton = (): JSX.Element => (
-  <IconButton icon={<PwResetIcon />} title="Reset password" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="pwReset"
+  />
 );
 
 export const searchButton = (): JSX.Element => (
-  <IconButton icon={<SearchIcon />} title="Search" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="search"
+  />
 );
 
 export const newSearchButton = (): JSX.Element => (
-  <IconButton icon={<SearchIcon />} title="New search" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="newSearch"
+  />
 );
 
 export const requestButton = (): JSX.Element => (
-  <IconButton icon={<RequestIcon />} title="Send request" />
+  <IconButton
+    onClick={() => {
+      console.log("clicked");
+    }}
+    variant="request"
+  />
 );
