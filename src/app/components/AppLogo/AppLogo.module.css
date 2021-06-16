@@ -1,0 +1,16 @@
+.header {
+  display: grid;
+  justify-content: center;
+}
+
+.header svg {
+  justify-self: center;
+}
+
+.title {
+  font-family: var(--secondary-font-family);
+  font-size: 4.5em;
+  letter-spacing: 0.1em;
+  color: var(--primary-color);
+  margin: 0;
+}
