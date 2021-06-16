@@ -5,7 +5,7 @@ export default function PwResetIcon(): JSX.Element {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="18.561"
-      height="21.213"
+      height="21"
       viewBox="0 0 18.561 21.213"
     >
       <path

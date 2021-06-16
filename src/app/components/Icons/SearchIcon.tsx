@@ -4,8 +4,8 @@ export default function SearchIcon(): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="23.965"
-      height="23.969"
+      width="21"
+      height="21"
       viewBox="0 0 23.965 23.969"
     >
       <path
