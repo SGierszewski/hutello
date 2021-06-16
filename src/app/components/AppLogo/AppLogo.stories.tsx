@@ -6,4 +6,4 @@ export default {
   component: AppLogo,
 };
 
-export const AppLpgo = (): JSX.Element => <AppLogo title={"Hutello"} />;
+export const AppLpgo = (): JSX.Element => <AppLogo />;
