@@ -25,9 +25,12 @@
   --secondary-text-color: #57524e;
   --hint-color: #9e4ae3;
   --background-color: #fff;
-  --button-icon-color: #fff;
-  --button-text-color: #fff;
   --placeholder-color: #b5b1b1;
+
+  /* BUTTON STYLE */
+  --button-text-color: #fff;
+  --button-icon-color: #fff;
+  --button-shadow: 0.5px 0.5px 3px #888;
 }
 
 html {
