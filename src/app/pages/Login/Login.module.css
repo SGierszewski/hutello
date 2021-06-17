@@ -18,6 +18,12 @@
   gap: 0.8em;
 }
 
+.loginForm button {
+  width: 8em;
+  place-self: center;
+  margin-top: 1em;
+}
+
 .links {
   margin-top: 2em;
 }
