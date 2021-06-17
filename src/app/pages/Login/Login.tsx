@@ -11,7 +11,9 @@ function Login(): JSX.Element {
       <header className={styles.header}>
         <AppLogo />
         <h2 className={styles.header__subtitle}>
-          Find all dog daycare places in town
+          Find all dog daycare
+          <br />
+          places in town
         </h2>
       </header>
       <main className={styles.main}>
