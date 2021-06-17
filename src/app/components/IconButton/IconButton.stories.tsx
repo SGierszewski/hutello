@@ -1,5 +1,9 @@
 import React from "react";
 import IconButton from "./IconButton";
+import PwResetIcon from "../Icons/PwResetIcon";
+import RequestIcon from "../Icons/RequestIcon";
+import SearchIcon from "../Icons/SearchIcon";
+import UserIcon from "../Icons/UserIcon";
 
 export default {
   title: "Component/IconButton",
@@ -11,8 +15,10 @@ export const loginButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="login"
-  />
+    title="Login"
+  >
+    <UserIcon />
+  </IconButton>
 );
 
 export const signUpButton = (): JSX.Element => (
@@ -20,8 +26,10 @@ export const signUpButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="signUp"
-  />
+    title="Sign up"
+  >
+    <UserIcon />
+  </IconButton>
 );
 
 export const pwResetButton = (): JSX.Element => (
@@ -29,8 +37,10 @@ export const pwResetButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="pwReset"
-  />
+    title="Reset password"
+  >
+    <PwResetIcon />
+  </IconButton>
 );
 
 export const searchButton = (): JSX.Element => (
@@ -38,8 +48,10 @@ export const searchButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="search"
-  />
+    title="Search"
+  >
+    <SearchIcon />
+  </IconButton>
 );
 
 export const newSearchButton = (): JSX.Element => (
@@ -47,8 +59,10 @@ export const newSearchButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="newSearch"
-  />
+    title="New search"
+  >
+    <SearchIcon />
+  </IconButton>
 );
 
 export const requestButton = (): JSX.Element => (
@@ -56,6 +70,8 @@ export const requestButton = (): JSX.Element => (
     onClick={() => {
       console.log("clicked");
     }}
-    variant="request"
-  />
+    title="Send request"
+  >
+    <RequestIcon />
+  </IconButton>
 );
