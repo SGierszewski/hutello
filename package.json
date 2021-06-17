@@ -13,8 +13,7 @@
     "test": "tsc && prettier --check . && eslint . && stylelint \"**/*.css\" && npm run jest",
     "storybook": "start-storybook -s src/app/assets -p 6006",
     "start": "node dist/server.js",
-    "jest": "jest",
-    "build-storybook": "build-storybook"
+    "jest": "jest"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
