@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./Login.module.css";
 import AppLogo from "../../components/AppLogo/AppLogo";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
+import IconButton from "../../components/IconButton/IconButton";
+import UserIcon from "../../components/Icons/UserIcon";
 
 function Login(): JSX.Element {
   return (
@@ -32,7 +34,14 @@ function Login(): JSX.Element {
               console.log("clicked");
             }}
           />
-          <p>BUTTON PLACEHOLDER</p>
+          <IconButton
+            title="Login"
+            onClick={() => {
+              console.log("clicked");
+            }}
+          >
+            <UserIcon />
+          </IconButton>
         </form>
         <div className={styles.links}>
           <a className={styles.forgotPwLink} href="#">
