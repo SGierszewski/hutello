@@ -1,6 +1,6 @@
 import React from "react";
 
-export function BackIcon(): JSX.Element {
+export default function BackIcon(): JSX.Element {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
