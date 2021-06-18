@@ -1,0 +1,9 @@
+.bubble {
+  z-index: 0;
+  position: absolute;
+}
+
+.dog {
+  z-index: 1;
+  padding: 6.5em 0 0 5em;
+}
