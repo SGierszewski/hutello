@@ -1,5 +1,6 @@
 import { addDecorator } from "@storybook/react";
 import { MemoryRouter } from "react-router-dom";
+import React from "react";
 import "../src/app/globals.css";
 
 export const parameters = {

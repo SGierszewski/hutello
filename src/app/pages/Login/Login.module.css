@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header__subtitle {
+  font-weight: 100;
+}
+
+.loginForm {
+  text-align: left;
+  display: grid;
+  gap: 0.8em;
+}
+
+.loginForm button {
+  width: 8em;
+  place-self: center;
+  margin-top: 1em;
+}
+
+.links {
+  margin-top: 2em;
+}
+
+.forgotPwLink {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.signUpLink {
+  color: var(--primary-color);
+  font-weight: 600;
+}
