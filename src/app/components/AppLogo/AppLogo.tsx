@@ -1,5 +1,5 @@
 import React from "react";
-import LogoIcon from "../../assets/Icons/logoIcon";
+import LogoIcon from "../Icons/logoIcon";
 import styles from "./AppLogo.module.css";
 
 export default function AppLogo(): JSX.Element {
