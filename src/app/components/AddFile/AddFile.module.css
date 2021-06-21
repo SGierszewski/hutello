@@ -1,0 +1,15 @@
+.addFile__label {
+  font-size: 1.1em;
+}
+
+.addFile__input {
+  height: 0;
+  overflow: hidden;
+}
+
+.addFile__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
