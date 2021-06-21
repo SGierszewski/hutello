@@ -1,4 +1,6 @@
 import dotenv from "dotenv";
+import { connectDatabase } from "./utils/database";
+
 dotenv.config();
 
 import express from "express";
@@ -6,6 +8,15 @@ import path from "path";
 
 const app = express();
 const { PORT = 3000 } = process.env;
+
+// await connectDatabase(databaseURI);
+const start = async () => {
+  if (process.env.MONGO_URL === undefined) {
+    throw new Error("Missing env MONGO_URL");
+  }
+
+  await connectDatabase(process.env.MONGO_URL);
+};
 
 // Serve storybook production bundle
 app.use("/storybook", express.static("dist/storybook"));
@@ -25,3 +36,5 @@ app.get("/", (_req, res) => {
 app.listen(PORT, () => {
   console.log(`boilerplate listening at http://localhost:${PORT}`);
 });
+
+start();
