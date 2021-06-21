@@ -1,0 +1,16 @@
+.addDog__label {
+  font-size: 1.1em;
+  display: grid;
+}
+
+.addDog__button {
+  background: none;
+  border: none;
+}
+
+.addDog__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin: 0.5em 0 0 0.7em;
+}
