@@ -5,7 +5,7 @@ dotenv.config();
 
 import express from "express";
 import path from "path";
-import { saveUser } from "./utils/users";
+import { readUsers, saveUser } from "./utils/users";
 
 const app = express();
 const { PORT = 3000 } = process.env;
@@ -19,6 +19,11 @@ app.use(express.json());
 app.post("/api/users", async (req, res) => {
   await saveUser(req.body);
   res.send("New user signed up");
+});
+
+app.get("/api/users", async (_req, res) => {
+  const users = await readUsers();
+  res.json(users);
 });
 
 // Serve storybook production bundle
