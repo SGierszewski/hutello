@@ -5,18 +5,21 @@ dotenv.config();
 
 import express from "express";
 import path from "path";
+import { saveUser } from "./utils/users";
 
 const app = express();
 const { PORT = 3000 } = process.env;
 
-// await connectDatabase(databaseURI);
-const start = async () => {
-  if (process.env.MONGO_URL === undefined) {
-    throw new Error("Missing env MONGO_URL");
-  }
+if (process.env.MONGO_URL === undefined) {
+  throw new Error("Missing env MONGO_URL");
+}
 
-  await connectDatabase(process.env.MONGO_URL);
-};
+app.use(express.json());
+
+app.post("/api/users", async (req, res) => {
+  await saveUser(req.body);
+  res.send("New user signed up");
+});
 
 // Serve storybook production bundle
 app.use("/storybook", express.static("dist/storybook"));
