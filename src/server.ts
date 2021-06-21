@@ -33,8 +33,9 @@ app.get("/", (_req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(PORT, () => {
-  console.log(`boilerplate listening at http://localhost:${PORT}`);
+connectDatabase(process.env.MONGO_URL).then(() => {
+  console.log("Database connected");
+  app.listen(PORT, () => {
+    console.log(`Hutello listening at http://localhost:${PORT}`);
+  });
 });
-
-start();

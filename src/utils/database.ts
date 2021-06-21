@@ -1,7 +1,9 @@
-import { MongoClient } from "mongodb";
+import { Collection, MongoClient } from "mongodb";
+import type { User } from "../types";
 
+let client: MongoClient;
 export const connectDatabase = async (url: string): Promise<void> => {
-  const client = new MongoClient(url, {
+  client = new MongoClient(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
