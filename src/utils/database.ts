@@ -11,3 +11,11 @@ export const connectDatabase = async (url: string): Promise<void> => {
   const databasesList = await client.db().admin().listDatabases();
   console.log(databasesList);
 };
+
+export const getCollection = <T>(name: string): Collection<T> => {
+  return client.db().collection<T>(name);
+};
+
+export const getUsersCollection = (): Collection<User> => {
+  return getCollection<User>("users");
+};
