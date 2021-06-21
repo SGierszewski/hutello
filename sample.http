@@ -6,16 +6,17 @@ POST {{baseUrl}}/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "firstName": "Susi",
-  "lastName": "Dog",
+  "image": "#",
   "email": "dogfan@dogmail.com",
-  "password": "superDog9000"
+  "password": "superDog9000",
+  "firstName": "Susi",
+  "lastName": "Arglos",
+  "streetName": "Dog Avenue",
+  "postcode": 50000,
+  "city": "Dogtown",
+  "docs": "#"
 }
 
 ### Request all users
 GET {{baseUrl}}/api/users HTTP/1.1
-Accept: application/json
-
-### Request a single user
-GET {{baseUrl}}/api/users/user HTTP/1.1
 Accept: application/json
