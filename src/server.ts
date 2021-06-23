@@ -1,11 +1,21 @@
 import dotenv from "dotenv";
+import { connectDatabase } from "./server/database";
+
 dotenv.config();
 
 import express from "express";
 import path from "path";
+import router from "./server/routes";
 
 const app = express();
 const { PORT = 3000 } = process.env;
+
+if (process.env.MONGO_URL === undefined) {
+  throw new Error("Missing env MONGO_URL");
+}
+
+app.use(express.json());
+app.use("/api", router);
 
 // Serve storybook production bundle
 app.use("/storybook", express.static("dist/storybook"));
@@ -22,6 +32,9 @@ app.get("/", (_req, res) => {
   res.send("Hello World!");
 });
 
-app.listen(PORT, () => {
-  console.log(`boilerplate listening at http://localhost:${PORT}`);
+connectDatabase(process.env.MONGO_URL).then(() => {
+  console.log("Database connected");
+  app.listen(PORT, () => {
+    console.log(`Hutello listening at http://localhost:${PORT}`);
+  });
 });

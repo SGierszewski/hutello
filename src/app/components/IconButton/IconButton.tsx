@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./IconButton.module.css";
 
 type IconButtonProps = {
-  onClick: () => void;
+  onClick?: () => void;
   children: React.ReactNode;
   title: string;
 };
