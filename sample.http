@@ -7,7 +7,7 @@ Content-Type: application/json
 
 {
   "image": "#",
-  "email": "dogfan@dogmail.com",
+  "email": "dog@dog.com",
   "password": "superDog9000",
   "firstName": "Susi",
   "lastName": "Arglos",
@@ -20,3 +20,26 @@ Content-Type: application/json
 ### Request all users
 GET {{baseUrl}}/api/users HTTP/1.1
 Accept: application/json
+
+### Request a single user
+GET {{baseUrl}}/api/users/dog@dog.com HTTP/1.1
+Accept: application/json
+
+### User login
+## Correct login
+POST {{baseUrl}}/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "dog@dog.com",
+  "password": "wuff2021"
+}
+
+## Incorrect login
+POST {{baseUrl}}/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "user@email.com",
+  "password": "wuff2021"
+}
