@@ -12,13 +12,18 @@ function Login(): JSX.Element {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: Partial<User> = { email, password };
-    await verifyLogin(user);
-    history.push("/");
+    try {
+      const user: Partial<User> = { email, password };
+      await verifyLogin(user);
+      history.push("/");
+    } catch (error) {
+      setErrorMessage(error.toString());
+    }
   }
 
   return (
@@ -50,6 +55,7 @@ function Login(): JSX.Element {
           <IconButton title="Login">
             <UserIcon />
           </IconButton>
+          {errorMessage && <div>Error: {errorMessage}</div>}
         </form>
         <div className={styles.links}>
           <a className={styles.forgotPwLink} href="#">
