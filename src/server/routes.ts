@@ -13,9 +13,19 @@ router.get("/users", async (_req, res) => {
   res.json(users);
 });
 
-router.get("/users/:email", async (req, res) => {
-  const user = await readUser(req.params.email);
-  res.json(user);
+// User login
+router.post("/users/login", async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+    const user = await readUser({ email, password });
+    if (!user) {
+      res.status(404).send("Email or password incorrect");
+      return;
+    }
+    res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
 });
 
 export default router;
