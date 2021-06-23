@@ -1,5 +1,5 @@
 import express from "express";
-import { saveUser, readUsers } from "./users";
+import { saveUser, readUsers, readUser } from "./users";
 
 const router = express.Router();
 
@@ -11,6 +11,11 @@ router.post("/users", async (req, res) => {
 router.get("/users", async (_req, res) => {
   const users = await readUsers();
   res.json(users);
+});
+
+router.get("/users/:email", async (req, res) => {
+  const user = await readUser(req.params.email);
+  res.json(user);
 });
 
 export default router;
