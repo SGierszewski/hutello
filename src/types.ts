@@ -1,13 +1,16 @@
+import { ObjectId } from "bson";
+
 export type User = {
-  image: string;
+  _id?: ObjectId;
+  image?: string;
   email: string;
   password: string;
-  firstName: string;
-  lastName: string;
-  streetName: string;
-  postcode: number;
-  city: string;
-  docs: string;
+  firstName?: string;
+  lastName?: string;
+  streetName?: string;
+  postcode?: number;
+  city?: string;
+  docs?: string;
 };
 
 export type Dog = {
