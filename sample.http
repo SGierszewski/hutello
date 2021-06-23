@@ -21,25 +21,21 @@ Content-Type: application/json
 GET {{baseUrl}}/api/users HTTP/1.1
 Accept: application/json
 
-### Request a single user
-GET {{baseUrl}}/api/users/dog@dog.com HTTP/1.1
-Accept: application/json
-
 ### User login
-## Correct login
-POST {{baseUrl}}/api/login HTTP/1.1
+### Correct login
+POST {{baseUrl}}/api/users/login HTTP/1.1
 Content-Type: application/json
 
 {
   "email": "dog@dog.com",
-  "password": "wuff2021"
+  "password": "superDog9000"
 }
 
-## Incorrect login
-POST {{baseUrl}}/api/login HTTP/1.1
+### Incorrect login
+POST {{baseUrl}}/api/users/login HTTP/1.1
 Content-Type: application/json
 
 {
-  "email": "user@email.com",
-  "password": "wuff2021"
+  "email": "test@dog.com",
+  "password": "error"
 }
