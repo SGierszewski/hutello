@@ -6,7 +6,7 @@ import IconButton from "../../components/IconButton/IconButton";
 import UserIcon from "../../components/Icons/UserIcon";
 import { useHistory } from "react-router-dom";
 import type { User } from "../../../types";
-import { postUser } from "../../../utils/api";
+import { verifyLogin } from "../../../utils/api";
 
 function Login(): JSX.Element {
   const history = useHistory();
@@ -16,8 +16,8 @@ function Login(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: User = { email, password };
-    postUser(user);
+    const user: Partial<User> = { email, password };
+    await verifyLogin(user);
     history.push("/");
   }
 
