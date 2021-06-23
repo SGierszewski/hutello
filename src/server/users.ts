@@ -9,10 +9,10 @@ export const readUsers = async (): Promise<User[]> => {
   return await getUsersCollection().find().sort({ lastName: 1 }).toArray();
 };
 
-export const readUser = async (email: string): Promise<User | undefined> => {
-  const user = await getUsersCollection().findOne({ email });
+export const readUser = async (user: Partial<User>): Promise<User | null> => {
+  const result = await getUsersCollection().findOne(user);
   if (!user) {
-    throw new Error("There is no user with that email adress");
+    throw new Error("There is no user with that email address");
   }
-  return user;
+  return result;
 };
