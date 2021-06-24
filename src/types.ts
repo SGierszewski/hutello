@@ -23,12 +23,8 @@ export type Dog = {
   weight: number;
 };
 
-export type DogsPlaces = {
-  dogsPlaces: [
-    {
-      _id?: string;
-      name: string;
-      city: string;
-    }
-  ];
+export type Huta = {
+  _id?: ObjectId;
+  name: string;
+  city: string;
 };
