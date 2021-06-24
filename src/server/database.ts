@@ -1,5 +1,5 @@
 import { Collection, MongoClient } from "mongodb";
-import type { User } from "../types";
+import type { User, Huta } from "../types";
 
 let client: MongoClient;
 export const connectDatabase = async (url: string): Promise<void> => {
@@ -18,4 +18,8 @@ export const getCollection = <T>(name: string): Collection<T> => {
 
 export const getUsersCollection = (): Collection<User> => {
   return getCollection<User>("users");
+};
+
+export const getHutasCollection = (): Collection<Huta> => {
+  return getCollection<Huta>("hutas");
 };
