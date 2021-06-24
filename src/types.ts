@@ -22,3 +22,13 @@ export type Dog = {
   size: number;
   weight: number;
 };
+
+export type DogsPlaces = {
+  dogsPlaces: [
+    {
+      _id?: string;
+      name: string;
+      city: string;
+    }
+  ];
+};
