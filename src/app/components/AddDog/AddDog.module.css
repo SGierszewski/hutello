@@ -1,0 +1,15 @@
+.addDog__label {
+  font-size: 1.1em;
+  display: grid;
+}
+
+.addDog__button {
+  background: none;
+  border: none;
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+.addDog__button svg {
+  margin-right: 0.5em;
+}
