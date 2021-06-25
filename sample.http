@@ -26,10 +26,18 @@ POST {{baseUrl}}/api/hutas HTTP/1.1
 Content-Type: application/json
 
 {
-  "name": "Happy Dogs",
+  "name": "Wuff Town",
   "city": "Köln"
 }
 
 ### Request all HuTas
 GET {{baseUrl}}/api/hutas HTTP/1.1
+Accept: application/json
+
+### Request one HuTa by ID
+GET {{baseUrl}}/api/hutas/60d493ea25beba14dad6fa29 HTTP/1.1
+Accept: application/json
+
+### Search HuTas by city
+GET {{baseUrl}}/api/hutas/search?city=Köln HTTP/1.1
 Accept: application/json
