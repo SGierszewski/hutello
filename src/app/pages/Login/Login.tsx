@@ -7,7 +7,7 @@ import UserIcon from "../../components/Icons/UserIcon";
 import AlertIcon from "../../components/Icons/AlertIcon";
 import { useHistory } from "react-router-dom";
 import type { User } from "../../../types";
-import { verifyLogin } from "../../../utils/api";
+import { login } from "../../../utils/api";
 
 function Login(): JSX.Element {
   const history = useHistory();
@@ -20,7 +20,7 @@ function Login(): JSX.Element {
 
     try {
       const user: Partial<User> = { email, password };
-      await verifyLogin(user);
+      await login(user);
       history.push("/");
     } catch (error) {
       setErrorMessage(error.toString());
