@@ -18,17 +18,17 @@ function SpeechBubble({ speech }: SpeechProps): JSX.Element {
           transform="translate(-563.759 -39.682)"
           fill="var(--background-color)"
           stroke="var(--primary-text-color)"
-          stroke-linejoin="round"
-          stroke-width="1"
+          strokeLinejoin="round"
+          strokeWidth="1"
         />
         <text
           transform="matrix(0.998, -0.07, 0.07, 0.998, 140.54, 70.083)"
           fill="var(--primary-text-color)"
-          font-size="28"
-          font-family="var(--secondary-font-family)"
-          letter-spacing="0.03em"
+          fontSize="28"
+          fontFamily="var(--secondary-font-family)"
+          letterSpacing="0.03em"
         >
-          <tspan text-anchor="middle">{speech}</tspan>
+          <tspan textAnchor="middle">{speech}</tspan>
         </text>
       </g>
     </svg>
