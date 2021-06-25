@@ -1,5 +1,5 @@
 import express from "express";
-import { saveHuta, readHutas, searchHutas } from "./hutas";
+import { saveHuta, readHutas, filterHutas, getHutaById } from "./hutas";
 import { saveUser, readUsers } from "./users";
 
 const router = express.Router();
@@ -19,25 +19,26 @@ router.post("/hutas", async (req, res) => {
   res.send("New HuTa added to DB");
 });
 
-router.get("/hutas", async (_req, res) => {
+router.get("/hutas", async (req, res) => {
+  const { city } = req.query;
+  if (typeof city !== "string") {
+    res.status(400).send("Keyword is not valid");
+    return;
+  }
+  if (city) {
+    const hutas = await filterHutas(city);
+    res.json(hutas);
+    return;
+  }
   const hutas = await readHutas();
   res.json(hutas);
 });
 
-router.get("/hutas/:id", async (_req, res) => {
-  const hutas = await readHutas();
-  res.json(hutas);
-});
-
-router.get("/search", async (req, res, next) => {
+router.get("/hutas/:_id", async (req, res, next) => {
   try {
-    const { query } = req.query;
-    if (typeof query.city !== "string") {
-      res.status(400).send("Keyword is not valid");
-      return;
-    }
-    const searchResult = await searchHutas(query.city);
-    res.status(200).json(searchResult);
+    const { _id } = req.params;
+    const hutaResult = await getHutaById(_id);
+    res.status(200).json(hutaResult);
   } catch (error) {
     next(error);
   }
