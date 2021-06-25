@@ -9,16 +9,12 @@ type AddDogProps = {
 
 export default function AddDog({ label }: AddDogProps): JSX.Element {
   return (
-    <div>
-      <label className={styles.addDog__label}>
-        {label}
-        <button className={styles.addDog__button}>
-          <div className={styles.addDog__icons}>
-            <PlusIcon />
-            <DogIcon />
-          </div>
-        </button>
-      </label>
-    </div>
+    <label className={styles.addDog__label}>
+      {label}
+      <button className={styles.addDog__button}>
+        <PlusIcon />
+        <DogIcon />
+      </button>
+    </label>
   );
 }
