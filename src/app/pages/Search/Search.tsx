@@ -17,35 +17,23 @@ export default function SearchPage(): JSX.Element {
 
   return (
     <div className={styles.container}>
-      <header>
+      <header className={styles.header}>
         <SpeakingDog speech="where can i stay?" />
-        <h2>Search dog daycare places in…</h2>
+        <h2 className={styles.header__subtitle}>
+          Search dog daycare places in…
+        </h2>
       </header>
       <HutaSearch onSubmit={handleSearch} />
-      <h3>RESULTS</h3>
-      <ul>
+      <h3 className={styles.searchResults__title}>Search result(s)</h3>
+      <ul className={styles.searchResults__list}>
         {hutas?.map((huta) => {
-          return <li key={huta._id}>{huta.name}</li>;
+          return (
+            <li key={huta.name} className={styles.searchResults__item}>
+              {huta.name}
+            </li>
+          );
         })}
       </ul>
     </div>
   );
 }
-
-// export function SearchResults(hutas: Huta): JSX.Element {
-//   return (
-//     <div>
-//       <header>
-//         <IconButton children={<SearchIcon />} title="New search" />
-//         <h2>Search result(s)</h2>
-//       </header>
-//       <main>
-//         <ul>
-//           {hutas.map((huta) => (
-//             <li key={huta._id}>{huta.name}</li>
-//           ))}
-//         </ul>
-//       </main>
-//     </div>
-//   );
-// }
