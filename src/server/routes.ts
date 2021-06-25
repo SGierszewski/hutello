@@ -22,6 +22,10 @@ router.post("/users/login", async (req, res, next) => {
       res.status(404).send("Email or password incorrect");
       return;
     }
+    res.setHeader(
+      "Set-Cookie",
+      `userID=${user._id};path=/;Max-Age=${365 * 24 * 60 * 60}`
+    );
     res.status(200).json(user);
   } catch (error) {
     next(error);
