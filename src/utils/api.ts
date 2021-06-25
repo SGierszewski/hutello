@@ -16,7 +16,7 @@ export async function postUser(user: User): Promise<User> {
   return result;
 }
 
-export async function verifyLogin(user: Partial<User>): Promise<User> {
+export async function login(user: Partial<User>): Promise<User> {
   const response = await fetch("/api/users/login", {
     method: "POST",
     headers: {
