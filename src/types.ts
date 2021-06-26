@@ -11,6 +11,16 @@ export type User = {
   postcode?: number;
   city?: string;
   docs?: string;
+  dogs: [
+    {
+      dogName: string;
+      sex: string;
+      dateOfBirth: number;
+      breed: string;
+      size: number;
+      weight: number;
+    }
+  ];
 };
 
 export type Dog = {
