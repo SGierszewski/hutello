@@ -10,9 +10,7 @@ export const readUsers = async (): Promise<User[]> => {
 };
 
 export const readUser = async (user: Partial<User>): Promise<User | null> => {
-  const result = await getUsersCollection().findOne(user);
-  if (!user) {
-    throw new Error("There is no user with that email address");
-  }
-  return result;
+  return await getUsersCollection().findOne(user, {
+    projection: { password: 0 },
+  });
 };
