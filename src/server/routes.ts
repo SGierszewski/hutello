@@ -36,11 +36,11 @@ router.post("/users/login", async (req, res, next) => {
 // Check user login
 router.get("/users/me", async (req, res, next) => {
   try {
-    const { userId } = req.cookies;
-    if (!userId) {
+    const { userID } = req.cookies;
+    if (!userID) {
       return res.status(401).end("Access denied! Please login first.");
     }
-    const user = await readUser({ _id: new ObjectID(userId) });
+    const user = await readUser({ _id: new ObjectID(userID) });
     if (!user) {
       res.status(404).send("User not found.");
       return;
