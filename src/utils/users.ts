@@ -1,5 +1,5 @@
 import type { User } from "../types";
-import { getUsersCollection } from "./database";
+import { getUsersCollection } from "./../server/database";
 
 export const saveUser = async (user: User): Promise<void> => {
   await getUsersCollection().insertOne({ ...user });
