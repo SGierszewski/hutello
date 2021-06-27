@@ -7,14 +7,24 @@ Content-Type: application/json
 
 {
   "image": "#",
-  "email": "dogfan@dogmail.com",
-  "password": "superDog9000",
-  "firstName": "Susi",
-  "lastName": "Arglos",
-  "streetName": "Dog Avenue",
+  "email": "dogfan@wuff.de",
+  "password": "123",
+  "firstName": "Steffi",
+  "lastName": "Dogmum",
+  "streetName": "Townstreet",
   "postcode": 50000,
-  "city": "Dogtown",
-  "docs": "#"
+  "city": "Köln",
+  "docs": "#",
+  "dogs": [
+    {
+      "dogName": "Susi",
+      "sex": "female",
+      "dateOfBirth": 26,
+      "breed": "Mixed",
+      "size": 54,
+      "weight": 17
+    }
+  ];
 }
 
 ### Request all users
