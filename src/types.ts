@@ -10,7 +10,7 @@ export type User = {
   streetName?: string;
   postcode?: number;
   city?: string;
-  docs?: string;
+  document?: string;
   dogs: [
     {
       dogName: string;
