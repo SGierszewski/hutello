@@ -24,6 +24,22 @@
   margin-top: 1em;
 }
 
+.loginForm__error {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 45%;
+  background: white;
+  color: var(--hint-color);
+  font-size: 1.2em;
+  border: solid 2px var(--hint-color);
+  padding: 0.5em;
+}
+
+.loginForm_error_message {
+  margin: 0 0 0.2em 0.8em;
+}
+
 .links {
   margin-top: 2em;
 }
