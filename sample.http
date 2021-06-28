@@ -21,6 +21,27 @@ Content-Type: application/json
 GET {{baseUrl}}/api/users HTTP/1.1
 Accept: application/json
 
+### Add a new Huta
+POST {{baseUrl}}/api/hutas HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Wuff Town",
+  "city": "Köln"
+}
+
+### Request all HuTas
+GET {{baseUrl}}/api/hutas HTTP/1.1
+Accept: application/json
+
+### Request one HuTa by ID
+GET {{baseUrl}}/api/hutas/60d493ea25beba14dad6fa29 HTTP/1.1
+Accept: application/json
+
+### Search HuTas by city
+GET {{baseUrl}}/api/hutas/search?city=Köln HTTP/1.1
+Accept: application/json
+
 ### User login (check Set-Cookie in Header)
 ### Correct login
 POST {{baseUrl}}/api/users/login HTTP/1.1

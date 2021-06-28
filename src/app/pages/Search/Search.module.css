@@ -1,0 +1,27 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.header__subtitle {
+  font-weight: 100;
+}
+
+.searchResults__title {
+  font-size: 1.5rem;
+}
+
+.searchResults__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.searchResults__item {
+  font-size: 1.2em;
+}

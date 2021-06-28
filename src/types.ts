@@ -22,3 +22,9 @@ export type Dog = {
   size: number;
   weight: number;
 };
+
+export type Huta = {
+  _id?: ObjectId;
+  name: string;
+  city: string;
+};
