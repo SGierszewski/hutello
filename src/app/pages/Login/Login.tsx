@@ -73,7 +73,7 @@ function Login(): JSX.Element {
           </a>
           <p>
             Don't have an account?{" "}
-            <a className={styles.signUpLink} href="#">
+            <a className={styles.signUpLink} href="./register">
               Sign up
             </a>
           </p>
