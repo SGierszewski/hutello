@@ -5,7 +5,7 @@ import AddDog from "../../components/AddDog/AddDog";
 import AddFile from "../../components/AddFile/AddFile";
 import IconButton from "../../components/IconButton/IconButton";
 import { useHistory } from "react-router";
-import type { User } from "../../../types";
+import type { Dog, User } from "../../../types";
 import UserIcon from "../../components/Icons/UserIcon";
 import { postUser } from "../../../utils/api";
 
@@ -22,7 +22,7 @@ export default function RegisterPage(): JSX.Element {
   // const [document, setDocument] = useState("");
   // const [dogPicture, setDigPicture] = useState("");
   const [dogName, setDogName] = useState("");
-  //   const [sex, setSex] = useState("");
+  //const [sex, setSex] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [breed, setBreed] = useState("");
   const [size, setSize] = useState("");
@@ -30,6 +30,15 @@ export default function RegisterPage(): JSX.Element {
 
   async function handleSignUp(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    const dog: Dog = {
+      // dogPicture,
+      dogName,
+      breed,
+      dateOfBirth,
+      //sex,
+      size: Number(size),
+      weight: Number(weight),
+    };
     const user: User = {
       // profilePicture,
       email,
@@ -37,15 +46,10 @@ export default function RegisterPage(): JSX.Element {
       firstName,
       lastName,
       streetName,
-      postcode,
+      postcode: Number(postcode),
       city,
       // document,
-      dogName,
-      // sex,
-      dateOfBirth,
-      breed,
-      size,
-      weight,
+      dogs: [dog],
     };
     await postUser(user);
     history.push("/");
@@ -99,6 +103,7 @@ export default function RegisterPage(): JSX.Element {
         />
         <div>
           <LabeledInput
+            type="number"
             label="Postcode"
             value={postcode}
             required={false}
@@ -115,7 +120,7 @@ export default function RegisterPage(): JSX.Element {
           label="Add a document"
           id="document"
           name="fileUpload"
-          accept=".pdf"
+          accept=".jpg, .png"
           multiple={true}
         />
         <h2>Add a dog</h2>
@@ -135,6 +140,7 @@ export default function RegisterPage(): JSX.Element {
         //Radio button component
         <LabeledInput
           label="Date of birth"
+          type="date"
           value={dateOfBirth}
           required={true}
           onChange={setDateOfBirth}
@@ -148,12 +154,14 @@ export default function RegisterPage(): JSX.Element {
         <div>
           <LabeledInput
             label="Size (cm)"
+            type="number"
             value={size}
             required={true}
             onChange={setSize}
           />
           <LabeledInput
             label="Weight (kg)"
+            type="number"
             value={weight}
             required={false}
             onChange={setWeight}
