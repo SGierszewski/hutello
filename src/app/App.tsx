@@ -12,7 +12,7 @@ type CustomRouteProps = RouteProps & {
 
 const routes: CustomRouteProps[] = [
   { path: "/", Component: Login, exact: true },
-  { path: "/Register", Component: Register },
+  { path: "/register", Component: Register },
   { path: "/search", Component: Search },
 ];
 
