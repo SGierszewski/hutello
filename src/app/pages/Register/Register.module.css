@@ -1,0 +1,39 @@
+.register__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  margin: 0 1em;
+}
+
+.register__container_header button {
+  place-items: left;
+}
+
+.register__container_title {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.registerForm__userSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 0.8em;
+}
+
+.registerForm__dogSection_title {
+  text-align: left;
+}
+
+.registerForm__dogSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 0.8em;
+}
