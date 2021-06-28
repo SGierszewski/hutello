@@ -1,6 +1,9 @@
 import { User } from "./../types";
 
-export async function postUser(user: User): Promise<User> {
+export async function postUser(user: {
+  email: string;
+  password: string;
+}): Promise<User> {
   const response = await fetch("/api/users", {
     method: "POST",
     headers: {

@@ -5,7 +5,7 @@ import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import IconButton from "../../components/IconButton/IconButton";
 import UserIcon from "../../components/Icons/UserIcon";
 import { useHistory } from "react-router-dom";
-import type { User } from "../../../types";
+
 import { postUser } from "../../../utils/api";
 
 function Login(): JSX.Element {
@@ -16,7 +16,7 @@ function Login(): JSX.Element {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: User = { email, password };
+    const user = { email, password };
     postUser(user);
     history.push("/");
   }

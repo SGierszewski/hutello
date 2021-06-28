@@ -1,34 +1,31 @@
 import { ObjectId } from "bson";
 
+export type Dog = {
+  dogPicture?: string;
+  dogName: string;
+  sex?: string;
+  dateOfBirth: string;
+  breed: string;
+  size: number;
+  weight: number;
+};
+
 export type User = {
   _id?: ObjectId;
-  image?: string;
+  profilePicture?: string;
   email: string;
   password: string;
-  firstName?: string;
+  firstName: string;
   lastName?: string;
   streetName?: string;
   postcode?: number;
   city?: string;
   document?: string;
-  dogs: [
-    {
-      dogName: string;
-      sex: string;
-      dateOfBirth: number;
-      breed: string;
-      size: number;
-      weight: number;
-    }
-  ];
+  dogs: Dog[];
 };
 
-export type Dog = {
-  image: string;
+export type Huta = {
+  _id?: ObjectId;
   name: string;
-  sex: string;
-  dateOfBirth: number;
-  breed: string;
-  size: number;
-  weight: number;
+  city: string;
 };
