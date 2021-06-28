@@ -4,21 +4,27 @@ import AppLogo from "../../components/AppLogo/AppLogo";
 import LabeledInput from "../../components/LabeledInput/LabeledInput";
 import IconButton from "../../components/IconButton/IconButton";
 import UserIcon from "../../components/Icons/UserIcon";
+import AlertIcon from "../../components/Icons/AlertIcon";
 import { useHistory } from "react-router-dom";
 import type { User } from "../../../types";
-import { postUser } from "../../../utils/api";
+import { login } from "../../../utils/api";
 
 function Login(): JSX.Element {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const user: User = { email, password };
-    postUser(user);
-    history.push("/");
+    try {
+      const user: Partial<User> = { email, password };
+      await login(user);
+      history.push("/");
+    } catch (error) {
+      setErrorMessage(error.toString());
+    }
   }
 
   return (
@@ -50,6 +56,16 @@ function Login(): JSX.Element {
           <IconButton title="Login">
             <UserIcon />
           </IconButton>
+          {errorMessage && (
+            <div className={styles.loginForm__error}>
+              <span className={styles.loginForm__error_icon}>
+                <AlertIcon />
+              </span>
+              <span className={styles.loginForm_error_message}>
+                {errorMessage}
+              </span>
+            </div>
+          )}
         </form>
         <div className={styles.links}>
           <a className={styles.forgotPwLink} href="#">

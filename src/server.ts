@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import { connectDatabase } from "./server/database";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ if (process.env.MONGO_URL === undefined) {
 }
 
 app.use(express.json());
+app.use(cookieParser());
 app.use("/api", router);
 
 // Serve storybook production bundle

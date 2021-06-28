@@ -1,6 +1,8 @@
 import express from "express";
 import { saveHuta, readHutas, filterHutas, getHutaById } from "./hutas";
 import { saveUser, readUsers } from "./users";
+import { saveUser, readUsers, readUser } from "./users";
+import { ObjectID } from "mongodb";
 
 const router = express.Router();
 
@@ -39,6 +41,39 @@ router.get("/hutas/:_id", async (req, res, next) => {
     const { _id } = req.params;
     const hutaResult = await getHutaById(_id);
     res.status(200).json(hutaResult);
+
+// User login
+router.post("/users/login", async (req, res, next) => {
+  try {
+    const { email, password } = req.body;
+    const user = await readUser({ email, password });
+    if (!user) {
+      res.status(404).send("Email or password incorrect");
+      return;
+    }
+    res.setHeader(
+      "Set-Cookie",
+      `userID=${user._id};path=/;Max-Age=${365 * 24 * 60 * 60}`
+    );
+    res.status(200).json(user);
+  } catch (error) {
+    next(error);
+  }
+});
+
+// Check user login
+router.get("/users/me", async (req, res, next) => {
+  try {
+    const { userID } = req.cookies;
+    if (!userID) {
+      return res.status(401).end("Access denied! Please login first.");
+    }
+    const user = await readUser({ _id: new ObjectID(userID) });
+    if (!user) {
+      res.status(404).send("User not found.");
+      return;
+    }
+    res.status(200).json(user);
   } catch (error) {
     next(error);
   }

@@ -7,8 +7,8 @@ Content-Type: application/json
 
 {
   "image": "#",
-  "email": "dogfan@dogmail.com",
-  "password": "superDog9000",
+  "email": "susi@dog.com",
+  "password": "lovemydog",
   "firstName": "Susi",
   "lastName": "Arglos",
   "streetName": "Dog Avenue",
@@ -41,3 +41,25 @@ Accept: application/json
 ### Search HuTas by city
 GET {{baseUrl}}/api/hutas/search?city=Köln HTTP/1.1
 Accept: application/json
+
+### User login (check Set-Cookie in Header)
+### Correct login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "susi@dog.com",
+  "password": "lovemydog"
+}
+
+### Incorrect login
+POST {{baseUrl}}/api/users/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test@dog.com",
+  "password": "error"
+}
+
+### Logged in user (make sure to login first)
+GET {{baseUrl}}/api/users/me HTTP/1.1
