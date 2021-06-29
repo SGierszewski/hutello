@@ -13,7 +13,6 @@ import styles from "./Register.module.css";
 
 export default function RegisterPage(): JSX.Element {
   const history = useHistory();
-  //   const [profilePicture, setProfilePicture] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -21,8 +20,6 @@ export default function RegisterPage(): JSX.Element {
   const [streetName, setStreetName] = useState("");
   const [postcode, setPostcode] = useState("");
   const [city, setCity] = useState("");
-  // const [document, setDocument] = useState("");
-  // const [dogPicture, setDigPicture] = useState("");
   const [dogName, setDogName] = useState("");
   const [sex, setSex] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
@@ -33,7 +30,6 @@ export default function RegisterPage(): JSX.Element {
   async function handleSignUp(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const dog: Dog = {
-      // dogPicture,
       dogName,
       breed,
       dateOfBirth,
@@ -42,7 +38,6 @@ export default function RegisterPage(): JSX.Element {
       weight: Number(weight),
     };
     const user: User = {
-      // profilePicture,
       email,
       password,
       firstName,
@@ -50,7 +45,6 @@ export default function RegisterPage(): JSX.Element {
       streetName,
       postcode: Number(postcode),
       city,
-      // document,
       dogs: [dog],
     };
     await postUser(user);
@@ -67,10 +61,9 @@ export default function RegisterPage(): JSX.Element {
         <div className={styles.registerForm__userSection}>
           <AddFile
             label="Add a profile picture"
-            id="profilePicture"
-            name="fileUpload"
             accept=".jpg, .png"
             multiple={false}
+            onChange={console.log}
           />
           <LabeledInput
             label="Email address"
@@ -121,20 +114,18 @@ export default function RegisterPage(): JSX.Element {
           </span>
           <AddFile
             label="Add a document"
-            id="document"
-            name="fileUpload"
             accept=".jpg, .png"
             multiple={true}
+            onChange={console.log}
           />
         </div>
         <div className={styles.registerForm__dogSection}>
           <h2 className={styles.registerForm__dogSection_title}>Add a dog</h2>
           <AddFile
-            label="Add a profile picture"
-            id="dogPicture"
-            name="fileUpload"
+            label="Add a dog picture"
             accept=".jpg, .png"
             multiple={false}
+            onChange={console.log}
           />
           <LabeledInput
             label="Dog name"
