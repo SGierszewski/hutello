@@ -9,29 +9,29 @@ export default {
 export const AddProfilePicture = (): JSX.Element => (
   <AddFile
     label="Add a profile picture"
-    id="profilePicture"
-    name="fileUpload"
     accept=".jpg, .png"
     multiple={false}
+    imageSrc="#"
+    onChange={console.log}
   />
 );
 
 export const AddDogPicture = (): JSX.Element => (
   <AddFile
     label="Add a dog picture"
-    id="dogPicture"
-    name="fileUpload"
     accept=".jpg, .png"
     multiple={false}
+    imageSrc="#"
+    onChange={console.log}
   />
 );
 
 export const AddDocument = (): JSX.Element => (
   <AddFile
     label="Add a document"
-    id="document"
-    name="fileUpload"
     accept=".pdf"
     multiple={false}
+    imageSrc="#"
+    onChange={console.log}
   />
 );
