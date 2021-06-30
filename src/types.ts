@@ -1,7 +1,7 @@
 import { ObjectId } from "bson";
 
 export type Dog = {
-  dogPicture?: string;
+  dogImageSrc?: string;
   dogName: string;
   sex?: string;
   dateOfBirth: string;
@@ -12,7 +12,7 @@ export type Dog = {
 
 export type User = {
   _id?: ObjectId;
-  profilePicture?: string;
+  imageSrc?: string;
   email: string;
   password: string;
   firstName: string;
@@ -20,7 +20,7 @@ export type User = {
   streetName?: string;
   postcode?: number;
   city?: string;
-  document?: string;
+  documentImageSrc?: string;
   dogs: Dog[];
 };
 
