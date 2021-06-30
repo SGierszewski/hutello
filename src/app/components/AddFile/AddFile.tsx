@@ -8,13 +8,15 @@ type AddFileProps = {
   label: string;
   accept: string;
   multiple: boolean;
-  onChange: (files: FileList) => void;
+  imageSrc: string;
+  onChange: React.Dispatch<React.SetStateAction<string>>;
 };
 
 export default function AddFile({
   label,
   accept,
   multiple,
+  imageSrc,
 }: AddFileProps): JSX.Element {
   async function handleImageUpload(event: React.ChangeEvent<HTMLInputElement>) {
     const imageFile = event.target.files?.item(0);
@@ -22,7 +24,7 @@ export default function AddFile({
       return;
     }
     const imageSrc = uploadImage(imageFile);
-    console.log(imageSrc);
+    console.log(3, imageSrc);
     return imageSrc;
   }
 
@@ -39,6 +41,7 @@ export default function AddFile({
           />
         </div>
         <span className={styles.addFile__icons}>
+          <img className={styles.addFile__preview} src={imageSrc} alt="" />
           <PlusIcon />
           <FileUploadIcon />
         </span>
