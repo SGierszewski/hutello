@@ -6,7 +6,7 @@ POST {{baseUrl}}/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "profilePicture": "#",
+  "imageSrc": "#",
   "email": "susi@dog.com",
   "password": "lovemydog",
   "firstName": "Susi",
@@ -14,13 +14,13 @@ Content-Type: application/json
   "streetName": "Dog Avenue",
   "postcode": 50000,
   "city": "Köln",
-  "document": "#",
+  "documentImageSrc": "#",
   "dogs": [
     {
-      "dogPicture": "#",
+      "dogImageSrc": "#",
       "dogName": "Susi",
       "sex": "female",
-      "dateOfBirth": 26,
+      "dateOfBirth": 2020-02-26,
       "breed": "Mixed",
       "size": 54,
       "weight": 17
