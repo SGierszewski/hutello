@@ -10,11 +10,15 @@ export default {
 };
 
 export const NavbarProfileLink = (): JSX.Element => (
-  <NavbarLink link={"./profile"} icon={<NavbarDogIcon />} />
+  <NavbarLink active={true} link={"./profile"} icon={<NavbarDogIcon />} />
 );
 export const NavbarSearchLink = (): JSX.Element => (
-  <NavbarLink link={"./search"} icon={<NavbarSearchIcon />} />
+  <NavbarLink active={true} link={"./search"} icon={<NavbarSearchIcon />} />
 );
 export const NavbarFavoriteLink = (): JSX.Element => (
-  <NavbarLink link={"./favorites"} icon={<NavbarFavoriteIcon />} />
+  <NavbarLink
+    active={true}
+    link={"./favorites"}
+    icon={<NavbarFavoriteIcon />}
+  />
 );
