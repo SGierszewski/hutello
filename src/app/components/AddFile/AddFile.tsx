@@ -23,7 +23,7 @@ export default function AddFile({
     if (!imageFile) {
       return;
     }
-    const imageSrc = uploadImage(imageFile);
+    const imageSrc = await uploadImage(imageFile);
     console.log(3, imageSrc);
     return imageSrc;
   }
