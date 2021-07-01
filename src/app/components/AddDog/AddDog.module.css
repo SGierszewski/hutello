@@ -12,4 +12,5 @@
 
 .addDog__button svg {
   margin-right: 0.5em;
+  color: var(--primary-color);
 }
