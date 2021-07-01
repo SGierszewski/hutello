@@ -1,6 +1,5 @@
 import express from "express";
 import { saveHuta, readHutas, filterHutas, getHutaById } from "./hutas";
-import { saveUser, readUsers } from "./users";
 import { saveUser, readUsers, readUser } from "./users";
 import { ObjectID } from "mongodb";
 
@@ -40,7 +39,15 @@ router.get("/hutas/:_id", async (req, res, next) => {
   try {
     const { _id } = req.params;
     const hutaResult = await getHutaById(_id);
+    if (!hutaResult) {
+      res.status(404).send("No HuTa found");
+      return;
+    }
     res.status(200).json(hutaResult);
+  } catch (error) {
+    next(error);
+  }
+});
 
 // User login
 router.post("/users/login", async (req, res, next) => {

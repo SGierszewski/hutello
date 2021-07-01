@@ -1,0 +1,7 @@
+.navbarLink {
+  color: var(--navbar-icon-color);
+}
+
+.navbarLink__active {
+  color: var(--navbar-active-icon-color);
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import styles from "./App.module.css";
+import Navbar from "./components/Navbar/Navbar";
 import Login from "./pages/Login/Login";
 import Search from "./pages/Search/Search";
 
@@ -25,6 +26,7 @@ function App(): JSX.Element {
             </Route>
           ))}
         </Switch>
+        <Navbar className={styles.navbar} />
       </BrowserRouter>
     </div>
   );

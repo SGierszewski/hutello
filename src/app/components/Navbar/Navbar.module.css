@@ -1,0 +1,7 @@
+.navbar {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 4em;
+}
