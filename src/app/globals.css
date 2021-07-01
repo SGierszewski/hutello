@@ -32,6 +32,10 @@
   --button-icon-color: #fff;
   --back-button-color: #964b00;
   --button-shadow: 0.5px 0.5px 3px #888;
+
+  /* NAVBAR STYLE */
+  --navbar-icon-color: #fff;
+  --navbar-active-icon-color: #964b00;
 }
 
 html {
