@@ -15,9 +15,9 @@ export default function NavbarLink({
 }: NavbarLinkProps): JSX.Element {
   return (
     <Link
-      className={`${styles.navbarLink} ${
-        active ? styles[`navbarLink : active`] : ""
-      }`}
+      className={
+        active ? `${styles.navbarLink__active}` : `${styles.navbarLink}`
+      }
       to={link}
     >
       {icon}
