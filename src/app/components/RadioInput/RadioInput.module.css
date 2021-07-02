@@ -11,7 +11,3 @@
 .radio__input:checked {
   border: 6px solid var(--primary-color);
 }
-
-.radio__label {
-  font-size: 1em;
-}
