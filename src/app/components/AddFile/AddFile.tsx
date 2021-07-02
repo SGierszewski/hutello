@@ -1,5 +1,4 @@
 import React from "react";
-import { uploadImage } from "../../../utils/api";
 import FileUploadIcon from "../Icons/FileUploadIcon";
 import PlusIcon from "../Icons/PlusIcon";
 import styles from "./AddFile.module.css";
@@ -8,26 +7,15 @@ type AddFileProps = {
   label: string;
   accept: string;
   multiple: boolean;
-  imageSrc: string;
-  onChange: React.Dispatch<React.SetStateAction<string>>;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => Promise<void>;
 };
 
 export default function AddFile({
   label,
   accept,
   multiple,
-  imageSrc,
+  onChange,
 }: AddFileProps): JSX.Element {
-  async function handleImageUpload(event: React.ChangeEvent<HTMLInputElement>) {
-    const imageFile = event.target.files?.item(0);
-    if (!imageFile) {
-      return;
-    }
-    const imageSrc = await uploadImage(imageFile);
-    console.log(3, imageSrc);
-    return imageSrc;
-  }
-
   return (
     <div className={styles.container}>
       <label className={styles.addFile__label}>
@@ -37,11 +25,11 @@ export default function AddFile({
             type="file"
             accept={accept}
             multiple={multiple}
-            onChange={handleImageUpload}
+            onChange={onChange}
           />
         </div>
         <span className={styles.addFile__icons}>
-          <img className={styles.addFile__preview} src={imageSrc} alt="" />
+          <img className={styles.addFile__preview} src="" alt="" />
           <PlusIcon />
           <FileUploadIcon />
         </span>

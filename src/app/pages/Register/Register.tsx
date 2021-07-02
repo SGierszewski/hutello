@@ -7,13 +7,13 @@ import IconButton from "../../components/IconButton/IconButton";
 import { useHistory } from "react-router";
 import type { Dog, User } from "../../../types";
 import UserIcon from "../../components/Icons/UserIcon";
-import { postUser } from "../../../utils/api";
+import { postUser, uploadImage } from "../../../utils/api";
 import RadioInput from "../../components/RadioInput/RadioInput";
 import styles from "./Register.module.css";
 
 export default function RegisterPage(): JSX.Element {
   const history = useHistory();
-  const [imageSrc, setImageSrc] = useState("");
+  const [imageSrc, setUserImageSrc] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -57,6 +57,39 @@ export default function RegisterPage(): JSX.Element {
     history.push("/");
   }
 
+  async function handleUserImageUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const imageFile = event.target.files?.item(0);
+    if (!imageFile) {
+      return;
+    }
+    const imagePath = await uploadImage(imageFile);
+    setUserImageSrc(imagePath.secure_url);
+  }
+
+  async function handleDocumentImageUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const imageFile = event.target.files?.item(0);
+    if (!imageFile) {
+      return;
+    }
+    const imagePath = await uploadImage(imageFile);
+    setDocumentImageSrc(imagePath.secure_url);
+  }
+
+  async function handleDogImageUpload(
+    event: React.ChangeEvent<HTMLInputElement>
+  ) {
+    const imageFile = event.target.files?.item(0);
+    if (!imageFile) {
+      return;
+    }
+    const imagePath = await uploadImage(imageFile);
+    setDogImageSrc(imagePath.secure_url);
+  }
+
   return (
     <div className={styles.register__container}>
       <header className={styles.register__container_header}>
@@ -69,8 +102,7 @@ export default function RegisterPage(): JSX.Element {
             label="Add a profile picture"
             accept=".jpg, .png"
             multiple={false}
-            imageSrc={imageSrc}
-            onChange={setImageSrc}
+            onChange={handleUserImageUpload}
           />
           <LabeledInput
             label="Email address"
@@ -123,8 +155,7 @@ export default function RegisterPage(): JSX.Element {
             label="Add a document"
             accept=".jpg, .png"
             multiple={true}
-            imageSrc={documentImageSrc}
-            onChange={setDocumentImageSrc}
+            onChange={handleDocumentImageUpload}
           />
         </div>
         <div className={styles.registerForm__dogSection}>
@@ -133,8 +164,7 @@ export default function RegisterPage(): JSX.Element {
             label="Add a dog picture"
             accept=".jpg, .png"
             multiple={false}
-            imageSrc={dogImageSrc}
-            onChange={setDogImageSrc}
+            onChange={handleDogImageUpload}
           />
           <LabeledInput
             label="Dog name"
