@@ -222,7 +222,9 @@ export default function RegisterPage(): JSX.Element {
           </span>
         </div>
         <AddDog label="Add another dog" />
-        <IconButton title="Sign up">{<UserIcon />}</IconButton>
+        <IconButton onClick={() => history.push("/profile")} title="Sign up">
+          {<UserIcon />}
+        </IconButton>
       </form>
     </div>
   );
