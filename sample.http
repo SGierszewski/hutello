@@ -6,15 +6,26 @@ POST {{baseUrl}}/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-  "image": "#",
+  "imageSrc": "#",
   "email": "susi@dog.com",
   "password": "lovemydog",
   "firstName": "Susi",
   "lastName": "Arglos",
   "streetName": "Dog Avenue",
   "postcode": 50000,
-  "city": "Dogtown",
-  "docs": "#"
+  "city": "Köln",
+  "documentImageSrc": "#",
+  "dogs": [
+    {
+      "dogImageSrc": "#",
+      "dogName": "Susi",
+      "sex": "female",
+      "dateOfBirth": 2020-02-26,
+      "breed": "Mixed",
+      "size": 54,
+      "weight": 17
+    }
+  ];
 }
 
 ### Request all users

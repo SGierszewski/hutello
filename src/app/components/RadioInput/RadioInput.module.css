@@ -1,0 +1,13 @@
+.radio__input {
+  appearance: none;
+  border-radius: 50%;
+  width: 1.4em;
+  height: 1.4em;
+  border: 2px solid var(--primary-text-color);
+  transition: 0.2s all linear;
+  margin-right: 0.5em;
+}
+
+.radio__input:checked {
+  border: 6px solid var(--primary-color);
+}

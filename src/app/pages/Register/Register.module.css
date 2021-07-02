@@ -1,0 +1,67 @@
+.register__container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  margin: 1.5em 1.5em;
+}
+
+.register__container_header {
+  display: flex;
+  flex-direction: column;
+  place-items: left;
+  row-gap: 1em;
+}
+
+.register__container_header button {
+  text-align: left;
+}
+
+.register__container_title {
+  text-align: left;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.registerForm__userSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
+  gap: 0.8em;
+}
+
+.registerForm__subsection {
+  display: flex;
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+
+.registerForm__dogSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
+  gap: 0.8em;
+  margin-top: 1.5em;
+}
+
+.registerForm__dogSection_title {
+  text-align: left;
+  margin: 0;
+}
+
+.registerForm__radioTitle {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+}
+
+.registerForm__dogSubsection {
+  display: flex;
+  column-gap: 1em;
+  margin-bottom: 1em;
+}

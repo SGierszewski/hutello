@@ -3,20 +3,18 @@ import FileUploadIcon from "../Icons/FileUploadIcon";
 import PlusIcon from "../Icons/PlusIcon";
 import styles from "./AddFile.module.css";
 
-type AddFileProps = {
+export type AddFileProps = {
   label: string;
-  id: string;
-  name: string;
   accept: string;
   multiple: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => Promise<void>;
 };
 
 export default function AddFile({
   label,
-  id,
-  name,
   accept,
   multiple,
+  onChange,
 }: AddFileProps): JSX.Element {
   return (
     <div className={styles.container}>
@@ -25,10 +23,9 @@ export default function AddFile({
         <div className={styles.addFile__input}>
           <input
             type="file"
-            id={id}
-            name={name}
             accept={accept}
             multiple={multiple}
+            onChange={onChange}
           />
         </div>
         <span className={styles.addFile__icons}>

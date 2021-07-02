@@ -1,12 +1,13 @@
 .addDog__label {
   font-size: 1.1em;
   display: grid;
+  text-align: left;
 }
 
 .addDog__button {
   background: none;
   border: none;
-  margin-top: 0.5em;
+  margin: 0.5em 0;
   text-align: left;
 }
 
