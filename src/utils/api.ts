@@ -49,8 +49,5 @@ export async function uploadImage(imageFile: File): Promise<CloudinaryResult> {
     }
   );
   const cloudinaryResult = await cloudinaryResponse.json();
-  console.log(1, cloudinaryResult);
-  const imageSrc = cloudinaryResult.secure_url;
-  console.log(2, imageSrc);
-  return imageSrc;
+  return cloudinaryResult;
 }
