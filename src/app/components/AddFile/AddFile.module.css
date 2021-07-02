@@ -13,10 +13,3 @@
   gap: 0.5em;
   margin-top: 0.5em;
 }
-
-.addFile__preview {
-  border-radius: 50%;
-  border: 1px dashed var(--primary-text-color);
-  width: 4em;
-  height: 4em;
-}

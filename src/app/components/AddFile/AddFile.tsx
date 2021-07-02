@@ -29,7 +29,6 @@ export default function AddFile({
           />
         </div>
         <span className={styles.addFile__icons}>
-          <img className={styles.addFile__preview} src="" alt="" />
           <PlusIcon />
           <FileUploadIcon />
         </span>
