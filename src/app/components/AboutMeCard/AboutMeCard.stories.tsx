@@ -6,4 +6,10 @@ export default {
   component: AboutMeCard,
 };
 
-export const ProfileCard = (): JSX.Element => <AboutMeCard />;
+export const ProfileCard = (): JSX.Element => (
+  <AboutMeCard
+    imageSrc="/src/app/assets/images/Steffi.jpeg"
+    documentImageSrc=""
+    dogImageSrc="/src/app/assets/images/Susi.png"
+  />
+);
