@@ -177,16 +177,16 @@ export default function RegisterPage(): JSX.Element {
             <RadioInput
               label="Female"
               type="radio"
-              name="chooseSex"
-              value={sex}
+              name="sex"
+              value="female"
               required={true}
               onChange={setSex}
             />
             <RadioInput
               label="Male"
               type="radio"
-              name="chooseSex"
-              value={sex}
+              name="sex"
+              value="male"
               required={true}
               onChange={setSex}
             />
