@@ -1,37 +1,33 @@
 import React from "react";
-import AddFile from "./AddFile";
+import { Story } from "@storybook/react";
+import AddFile, { AddFileProps } from "./AddFile";
 
 export default {
   title: "Component / AddFile",
   component: AddFile,
 };
 
-export const AddProfilePicture = (): JSX.Element => (
-  <AddFile
-    label="Add a profile picture"
-    accept=".jpg, .png"
-    multiple={false}
-    imageSrc="#"
-    onChange={console.log}
-  />
-);
+const Template: Story<AddFileProps> = (args) => <AddFile {...args} />;
 
-export const AddDogPicture = (): JSX.Element => (
-  <AddFile
-    label="Add a dog picture"
-    accept=".jpg, .png"
-    multiple={false}
-    imageSrc="#"
-    onChange={console.log}
-  />
-);
+export const Default = Template.bind({});
 
-export const AddDocument = (): JSX.Element => (
-  <AddFile
-    label="Add a document"
-    accept=".pdf"
-    multiple={false}
-    imageSrc="#"
-    onChange={console.log}
-  />
-);
+export const addProfilePicture = Template.bind({});
+addProfilePicture.args = {
+  label: "Add a profile picture",
+  accept: ".jpg, .png",
+  multiple: false,
+};
+
+export const addDogPicture = Template.bind({});
+addDogPicture.args = {
+  label: "Add a dog picture",
+  accept: ".jpg, .png",
+  multiple: false,
+};
+
+export const addDocumentPicture = Template.bind({});
+addDocumentPicture.args = {
+  label: "Add a profile picture",
+  accept: ".jpg, .png",
+  multiple: false,
+};

@@ -3,7 +3,7 @@ import FileUploadIcon from "../Icons/FileUploadIcon";
 import PlusIcon from "../Icons/PlusIcon";
 import styles from "./AddFile.module.css";
 
-type AddFileProps = {
+export type AddFileProps = {
   label: string;
   accept: string;
   multiple: boolean;
