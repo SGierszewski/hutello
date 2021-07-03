@@ -68,7 +68,7 @@ function Login(): JSX.Element {
           )}
         </form>
         <div className={styles.links}>
-          <a className={styles.forgotPwLink} href="#">
+          <a className={styles.forgotPwLink} href="/forgotpassword">
             Forgot password?
           </a>
           <p>

@@ -5,8 +5,10 @@ import SpeakingDog from "../../components/SpeakingDog/SpeakingDog";
 import BackButton from "../../components/BackButton/BackButton";
 import PwResetIcon from "../../components/Icons/PwResetIcon";
 import styles from "./ForgotPassword.module.css";
+import { useHistory } from "react-router-dom";
 
 export default function ForgotPassword(): JSX.Element {
+  const history = useHistory();
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -30,7 +32,7 @@ export default function ForgotPassword(): JSX.Element {
             onChange={() => console.log("clicked")}
           />
           <IconButton
-            onClick={() => console.log("clicked")}
+            onClick={() => history.push("/")}
             children={<PwResetIcon />}
             title="Reset password"
           />
