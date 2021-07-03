@@ -8,6 +8,7 @@
 .container__input {
   background-color: var(--secondary-color);
   color: var(--secondary-text-color);
+  font-size: 1.2em;
   border: none;
   border-radius: 0.5em;
   padding-left: 0.5em;

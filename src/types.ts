@@ -26,8 +26,19 @@ export type User = {
 
 export type Huta = {
   _id?: ObjectId;
+  logo: string;
   name: string;
+  streetName: string;
+  postcode: number;
   city: string;
+  phone: number;
+  email: string;
+  url: string;
+  info: string;
+  img1?: string;
+  img2?: string;
+  img3?: string;
+  img4?: string;
 };
 
 export type CloudinaryResult = {
