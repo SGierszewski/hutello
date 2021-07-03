@@ -2,7 +2,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  row-gap: 2em;
+  row-gap: 1em;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -10,6 +10,7 @@
 
 .header__subtitle {
   font-weight: 100;
+  margin: 0.5em 0 0 0;
 }
 
 .loginForm {
@@ -31,13 +32,13 @@
   bottom: 45%;
   background: white;
   color: var(--hint-color);
-  font-size: 1.2em;
   border: solid 2px var(--hint-color);
   padding: 0.5em;
 }
 
 .loginForm_error_message {
   margin: 0 0 0.2em 0.8em;
+  font-size: 0.8em;
 }
 
 .links {
