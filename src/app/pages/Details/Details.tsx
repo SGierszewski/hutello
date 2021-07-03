@@ -16,7 +16,7 @@ export default function Details(): JSX.Element {
           <h3>Dog's Paradise</h3>
           <img
             className={styles.hutaDetails__img}
-            src="src/app/assets/images/huta_example1.jpeg"
+            src="src/app/assets/images/huta_example1.png"
             alt=""
           />
         </div>
