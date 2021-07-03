@@ -1,0 +1,7 @@
+.navbarLink {
+  color: var(--color-favorite-icon);
+}
+
+.navbarLink__active {
+  color: var(--color-favorite-icon-active);
+}
