@@ -1,0 +1,12 @@
+.favorite__checkbox {
+  position: center;
+  opacity: 0;
+}
+
+.favorite__checkbox:checked + span {
+  color: var(--color-favorite-icon-active);
+}
+
+.favorite__icon {
+  color: var(--color-favorite-icon);
+}
