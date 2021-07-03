@@ -1,6 +1,8 @@
 import React from "react";
 import BackButton from "../../components/BackButton/BackButton";
+import FavoriteCheckbox from "../../components/FavoriteCheckbox/FavoriteCheckbox";
 import IconButton from "../../components/IconButton/IconButton";
+import FavoriteIcon from "../../components/Icons/FavoriteIcon";
 import RequestIcon from "../../components/Icons/RequestIcon";
 import styles from "./Details.module.css";
 
@@ -11,9 +13,9 @@ export default function Details(): JSX.Element {
         <BackButton />
       </header>
       <article className={styles.hutaDetails__card}>
-        <div className={styles.hutaDetails__header}>
-          //FAVORITE ICON
-          <h3>Dog's Paradise</h3>
+        <div className={styles.hutaDetails__card_header}>
+          <FavoriteCheckbox icon={<FavoriteIcon />} value="favorite" />
+          <h3 className={styles.hutaDetails__card_title}>Dog's Paradise</h3>
           <img
             className={styles.hutaDetails__img}
             src="src/app/assets/images/huta_example1.png"
@@ -21,7 +23,7 @@ export default function Details(): JSX.Element {
           />
         </div>
         <IconButton title="Send request">{<RequestIcon />}</IconButton>
-        <p>
+        <p className={styles.hutaDetails__info}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
           pharetra vel turpis nunc eget lorem dolor sed viverra. Consectetur
@@ -34,12 +36,12 @@ export default function Details(): JSX.Element {
           Enim eu turpis egestas pretium aenean pharetra magna ac. Mauris augue
           neque gravida in fermentum et sollicitudin.
         </p>
-        <div className={styles.hutaDetails__images}>
+        <section className={styles.hutaDetails__images}>
+          <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
-          <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
-        </div>
+        </section>
         <div className={styles.hutaDetails__contact}>
           <p>
             Musterstraße 3<br />
