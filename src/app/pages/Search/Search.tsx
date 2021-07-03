@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Huta } from "../../../types";
 import HutaSearch from "../../components/SearchInput/SearchInput";
+import SearchResultCard from "../../components/SearchResult/SearchResultCard";
 import SpeakingDog from "../../components/SpeakingDog/SpeakingDog";
 import styles from "./Search.module.css";
 
@@ -29,7 +30,13 @@ export default function SearchPage(): JSX.Element {
         {hutas?.map((huta) => {
           return (
             <li key={huta.name} className={styles.searchResults__item}>
-              {huta.name}
+              {/* {huta.name} */}
+              <SearchResultCard
+                name={huta.name}
+                streetName={huta.streetName}
+                postcode={huta.postcode}
+                city={huta.city}
+              />
             </li>
           );
         })}
