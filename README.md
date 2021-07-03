@@ -2,7 +2,7 @@
 
 > Find all dog daycare places in town
 
-My Hutello App helps the user find all dog daycare places in town. The user can create a detailed profile for him/her and one or more dogs. A search function lets the user search all places in a given city, provides detailed info for a single "HuTa" ("Hundetagesstätte" in German) and offers the possibility to send a request to a chosen HuTa.
+My Hutello App helps the user find all dog daycare places in town. The user can create a detailed profile for them and one or more dogs. A search function lets the user search all places in a given city, provides detailed info for a single "HuTa" ("Hundetagesstätte" in German) and offers the possibility to send a request to a chosen HuTa.
 
 Screenshot of the Login page:
 
