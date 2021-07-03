@@ -20,7 +20,7 @@ export default function AboutMeCard({
         <div className={styles.aboutMe__info}>
           <h3>Stefanie Gierszewski</h3>
           <p>Dogstreet 3</p>
-          <p>10001 Dogtown</p>
+          <span>10001 Dogtown</span>
           <h4 className={styles.aboutMe__docs}>My documents</h4>
           <img
             className={styles.aboutMe__docsImg}
@@ -34,13 +34,13 @@ export default function AboutMeCard({
       <article className={styles.aboutMe__card}>
         <div className={styles.aboutMe__info}>
           <h3>Susi</h3>
-          <p>Female, 26.02.2020</p>
+          <span>Female, 26.02.2020</span>
           <p>Mixed</p>
-          <p>54cm, 17kg</p>
+          <span>54cm, 17kg</span>
         </div>
         <img className={styles.aboutMe__img} src={dogImageSrc} alt="" />
       </article>
-      <AddDog label="Add another dog" />
+      <AddDog label="" />
     </div>
   );
 }
