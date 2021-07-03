@@ -2,26 +2,27 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  row-gap: 1em;
+  row-gap: 0.5em;
   justify-content: center;
   text-align: center;
   align-items: center;
+  overflow: scroll;
+  margin-bottom: 3.5em;
 }
 
 .header__subtitle {
   font-weight: 100;
+  font-size: 1.4em;
+  margin: 0.5em;
 }
 
 .searchResults__title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  margin: 0;
 }
 
 .searchResults__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
-}
-
-.searchResults__item {
-  font-size: 1.2em;
 }
