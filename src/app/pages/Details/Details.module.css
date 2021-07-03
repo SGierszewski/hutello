@@ -4,30 +4,55 @@
   align-content: center;
   justify-content: center;
   row-gap: 2em;
-  margin: 1.5em 1.5em;
+  margin: 1.5em 1.5em 3em 1.5em;
   overflow: scroll;
 }
 
-.hutaDetails__header {
+.hutaDetails__card_header {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  column-gap: 0.1em;
   background-color: var(--secondary-color);
   padding: 1em 0 1em 1em;
   border-radius: 0.5em;
-  margin-bottom: 3em;
-  width: 20em;
+  margin-bottom: 1em;
+  width: 18em;
+  height: 8em;
+}
+
+.hutaDetails__card_header h3 {
+  margin: 0;
 }
 
 .hutaDetails__img {
-  border-radius: 50%;
   width: 10em;
   height: 10em;
-  box-shadow: 0.5px 0.5px 3px #888;
+  border-radius: 50%;
+  box-shadow: 0.5px 0.5px 8px rgb(107, 107, 107);
   position: relative;
   left: 9em;
-  bottom: 8em;
+  bottom: 7em;
+}
+
+.hutaDetails__info {
+  width: 19em;
+  margin: 1em 0;
 }
 
 .hutaDetails__images {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.hutaDetails__images img {
+  display: grid;
+  border-radius: 5%;
+  width: 9.5em;
+  height: 9.5em;
+  object-fit: cover;
 }
 
 .hutaDetails__contact {
