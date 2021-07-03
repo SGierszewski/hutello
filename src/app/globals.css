@@ -36,6 +36,10 @@
   /* NAVBAR STYLE */
   --navbar-icon-color: #fff;
   --navbar-active-icon-color: #964b00;
+
+  /* FAVORITE ICON */
+  --color-favorite-icon: #fff;
+  --color-favorite-icon-active: #9e4ae3;
 }
 
 html {

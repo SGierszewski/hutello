@@ -37,8 +37,29 @@ POST {{baseUrl}}/api/hutas HTTP/1.1
 Content-Type: application/json
 
 {
+  "logo": "#",
   "name": "Wuff Town",
-  "city": "Köln"
+  "streetName": "Hauptstraße 3",
+  "postcode": 50772,
+  "city": "Köln",
+  "phone": 123456789,
+  "email": "wufftown@huta.de",
+  "url": "www.wufftown.org",
+  "info": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
+          pharetra vel turpis nunc eget lorem dolor sed viverra. Consectetur
+          purus ut faucibus pulvinar elementum integer enim neque volutpat.
+          Accumsan tortor posuere ac ut. Suspendisse ultrices gravida dictum
+          fusce ut placerat orci nulla. Commodo ullamcorper a lacus vestibulum
+          sed. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tincidunt eget
+          nullam non nisi est sit amet facilisis. Interdum consectetur libero id
+          faucibus nisl. Vel facilisis volutpat est velit egestas dui id ornare.
+          Enim eu turpis egestas pretium aenean pharetra magna ac. Mauris augue
+          neque gravida in fermentum et sollicitudin.",
+  "img1": "#",
+  "img2": "#",
+  "img3": "#",
+  "img4": "#"
 }
 
 ### Request all HuTas

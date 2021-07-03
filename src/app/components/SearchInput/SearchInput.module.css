@@ -1,11 +1,10 @@
 .searchForm {
   text-align: left;
   display: grid;
-  gap: 0.8em;
+  gap: 1em;
 }
 
 .searchForm button {
   font-size: 1.2em;
   place-self: center;
-  margin-top: 1em;
 }
