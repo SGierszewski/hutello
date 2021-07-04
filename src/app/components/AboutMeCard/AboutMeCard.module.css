@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5em;
+  width: 85%;
+}
+
+.aboutMe__title {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+.aboutMe__img {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  box-shadow: 0.5px 0.5px 8px rgb(107, 107, 107);
+  position: relative;
+  left: 2.5em;
+  bottom: 2.5em;
+}
+
+.aboutMe__card {
+  display: flex;
+  column-gap: 0.1em;
+  background-color: var(--secondary-color);
+  box-shadow: 0.5px 0.5px 8px rgb(160, 159, 159);
+  padding: 1em 0 1em 1em;
+  border-radius: 0.5em;
+  width: 18em;
+  position: relative;
+}
+
+.aboutMe__info h3,
+h4,
+p {
+  margin: 0;
+}
+
+.aboutMe__docs {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.aboutMe__docsImg {
+  width: 2em;
+  height: 2.5em;
+}
