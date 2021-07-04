@@ -24,17 +24,17 @@ export default function Details(): JSX.Element {
         </div>
         <IconButton title="Send request">{<RequestIcon />}</IconButton>
         <p className={styles.hutaDetails__info}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel
-          pharetra vel turpis nunc eget lorem dolor sed viverra. Consectetur
-          purus ut faucibus pulvinar elementum integer enim neque volutpat.
-          Accumsan tortor posuere ac ut. Suspendisse ultrices gravida dictum
-          fusce ut placerat orci nulla. Commodo ullamcorper a lacus vestibulum
-          sed. Vitae proin sagittis nisl rhoncus mattis rhoncus. Tincidunt eget
-          nullam non nisi est sit amet facilisis. Interdum consectetur libero id
-          faucibus nisl. Vel facilisis volutpat est velit egestas dui id ornare.
-          Enim eu turpis egestas pretium aenean pharetra magna ac. Mauris augue
-          neque gravida in fermentum et sollicitudin.
+          Wir sind Dog's Paradise, die Hundetagesstätte im Herzen von Köln. Wir
+          bieten professionelle und liebevolle Betreuung für Hunde in Köln und
+          Umland an. Wir sind werktags von von 07:00 Uhr bis 20:00 Uhr für Ihren
+          Liebling da und ermöglichen Spielspaß und Betreuung durch fachkundiges
+          Personal in einer harmonischen Gruppe. Unser Gelände umfasst über
+          3000qm eingezäunte Fläche zum miteinander Spielen, Toben oder
+          Faulenzen. Eine Sandfläche mit Pool sorgt vor allem an heißen Tagen
+          für Spaß und Abkühlung. Sollte ein Hund auch mal seine Ruhe wollen,
+          bietet unser Gelände viele gemütliche Rückzugsmöglichkeiten und
+          Liegeflächen, die natürlich wind- und wettergeschützt sind. Sie
+          möchten gerne weitere Infos? Dann kontaktieren Sie uns gerne!
         </p>
         <section className={styles.hutaDetails__images}>
           <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
@@ -45,11 +45,11 @@ export default function Details(): JSX.Element {
         <div className={styles.hutaDetails__contact}>
           <p>
             Musterstraße 3<br />
-            50000 Musterstadt
+            50000 Köln
           </p>
           <p>0000-123456-789</p>
-          <a href="">huta@email.de </a>
-          <a href="">www.huta.de</a>
+          <a href="">dogs.paradise@email.de </a>
+          <a href="">www.dogs-paradise.org</a>
         </div>
       </article>
     </div>
