@@ -1,0 +1,95 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  row-gap: 2em;
+  margin: 1.5em 1.5em 3em 1.5em;
+  overflow: scroll;
+}
+
+.hutaDetails__card_header {
+  display: flex;
+  flex-direction: column;
+  justify-self: left;
+  column-gap: 0.1em;
+  background-color: var(--secondary-color);
+  padding: 1em 0 1em 1em;
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+  width: 18em;
+  height: 8em;
+}
+
+.hutaDetails__card_header h3 {
+  margin: 0;
+}
+
+.hutaDetails__img {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  background-color: ivory;
+  box-shadow: 0.5px 0.5px 8px rgb(107, 107, 107);
+  position: relative;
+  left: 9em;
+  bottom: 7em;
+}
+
+.hutaDetails__request {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 50%;
+  background: white;
+  color: var(--hint-color);
+  border: solid 2px var(--hint-color);
+  padding: 0.5em;
+}
+
+.hutaDetails__request_message {
+  margin: 0 0 0.2em 0.8em;
+  font-size: 0.8em;
+}
+
+.hutaDetails__info {
+  width: 19em;
+  margin: 1em 0;
+}
+
+.hutaDetails__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.hutaDetails__images img {
+  display: grid;
+  border-radius: 5%;
+  width: 9.5em;
+  height: 9.5em;
+  object-fit: cover;
+}
+
+.hutaDetails__contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1em;
+  align-items: center;
+  justify-items: start;
+  background-color: var(--secondary-color);
+  padding: 1em 0 1em 1em;
+  border-radius: 0.5em;
+  margin-bottom: 3em;
+  width: 20em;
+  height: auto;
+}
+
+.hutaDetails__contact_web {
+  margin-top: 0.5em;
+}
+
+a {
+  color: var(--primary-color);
+}

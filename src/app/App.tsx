@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, RouteProps } from "react-router-dom";
 import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
+import Details from "./pages/Details/Details";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
@@ -19,6 +20,7 @@ const routes: CustomRouteProps[] = [
   { path: "/register", Component: Register },
   { path: "/profile", Component: Profile },
   { path: "/search", Component: Search },
+  { path: "/details", Component: Details },
 ];
 
 function App(): JSX.Element {
