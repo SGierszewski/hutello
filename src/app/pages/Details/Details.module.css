@@ -29,10 +29,27 @@
   width: 10em;
   height: 10em;
   border-radius: 50%;
+  background-color: ivory;
   box-shadow: 0.5px 0.5px 8px rgb(107, 107, 107);
   position: relative;
   left: 9em;
   bottom: 7em;
+}
+
+.hutaDetails__request {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 50%;
+  background: white;
+  color: var(--hint-color);
+  border: solid 2px var(--hint-color);
+  padding: 0.5em;
+}
+
+.hutaDetails__request_message {
+  margin: 0 0 0.2em 0.8em;
+  font-size: 0.8em;
 }
 
 .hutaDetails__info {
@@ -56,10 +73,23 @@
 }
 
 .hutaDetails__contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1em;
+  align-items: center;
+  justify-items: start;
   background-color: var(--secondary-color);
   padding: 1em 0 1em 1em;
   border-radius: 0.5em;
   margin-bottom: 3em;
   width: 20em;
   height: auto;
+}
+
+.hutaDetails__contact_web {
+  margin-top: 0.5em;
+}
+
+a {
+  color: var(--primary-color);
 }
