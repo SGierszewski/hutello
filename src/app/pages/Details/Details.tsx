@@ -57,21 +57,25 @@ export default function Details(): JSX.Element {
           für Spaß und Abkühlung. Sollte ein Hund auch mal seine Ruhe wollen,
           bietet unser Gelände viele gemütliche Rückzugsmöglichkeiten und
           Liegeflächen, die natürlich wind- und wettergeschützt sind. Sie
-          möchten gerne weitere Infos? Dann kontaktieren Sie uns gerne!
+          möchten weitere Infos? Dann kontaktieren Sie uns gerne!
         </p>
         <section className={styles.hutaDetails__images}>
-          <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
+          <img src="src/app/assets/images/huta_example1.png" alt="" />
           <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
-          <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
+          <img src="src/app/assets/images/huta_example4.jpeg" alt="" />
         </section>
         <div className={styles.hutaDetails__contact}>
+          <MailIcon />
           <p>
             Musterstraße 3<br />
             50000 Köln
           </p>
+          <PhoneIcon />
           <p>0000-123456-789</p>
+          <WebIcon className={styles.hutaDetails__contact_web} />
           <a href="">dogs.paradise@email.de </a>
+          <br />
           <a href="">www.dogs-paradise.org</a>
         </div>
       </article>
