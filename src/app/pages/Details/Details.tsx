@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import BackButton from "../../components/BackButton/BackButton";
 import FavoriteCheckbox from "../../components/FavoriteCheckbox/FavoriteCheckbox";
 import IconButton from "../../components/IconButton/IconButton";
+import AlertIcon from "../../components/Icons/AlertIcon";
 import FavoriteIcon from "../../components/Icons/FavoriteIcon";
+import MailIcon from "../../components/Icons/MailIcon";
+import PhoneIcon from "../../components/Icons/PhoneIcon";
 import RequestIcon from "../../components/Icons/RequestIcon";
+import WebIcon from "../../components/Icons/WebIcon";
 import styles from "./Details.module.css";
 
 export default function Details(): JSX.Element {
+  const [requestSend, setRequestSend] = useState(false);
+  function handleClick() {
+    setRequestSend(true);
+  }
+
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -18,11 +27,25 @@ export default function Details(): JSX.Element {
           <h3 className={styles.hutaDetails__card_title}>Dog's Paradise</h3>
           <img
             className={styles.hutaDetails__img}
-            src="src/app/assets/images/huta_example1.png"
+            src="src/app/assets/images/huta_logo.png"
             alt=""
           />
         </div>
-        <IconButton title="Send request">{<RequestIcon />}</IconButton>
+        <IconButton onClick={handleClick} title="Send request">
+          {<RequestIcon />}
+        </IconButton>
+        {requestSend && (
+          <div className={styles.hutaDetails__request}>
+            <span>
+              <AlertIcon />
+            </span>
+            <span className={styles.hutaDetails__request_message}>
+              Thank you!
+              <br />
+              Your request to "Dog's Paradise" was sent.
+            </span>
+          </div>
+        )}
         <p className={styles.hutaDetails__info}>
           Wir sind Dog's Paradise, die Hundetagesstätte im Herzen von Köln. Wir
           bieten professionelle und liebevolle Betreuung für Hunde in Köln und
