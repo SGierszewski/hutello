@@ -10,6 +10,7 @@ import RequestIcon from "../../components/Icons/RequestIcon";
 import WebIcon from "../../components/Icons/WebIcon";
 import styles from "./Details.module.css";
 import HutaLogo from "/src/app/assets/images/huta_logo.jpeg";
+import Huta1 from "src/app/assets/images/huta_example1.png";
 
 export default function Details(): JSX.Element {
   const [requestSend, setRequestSend] = useState(false);
@@ -57,7 +58,7 @@ export default function Details(): JSX.Element {
           möchten weitere Infos? Dann kontaktieren Sie uns gerne!
         </p>
         <section className={styles.hutaDetails__images}>
-          <img src="src/app/assets/images/huta_example1.png" alt="" />
+          <img src={Huta1} alt="" />
           <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
           <img src="src/app/assets/images/huta_example4.jpeg" alt="" />
