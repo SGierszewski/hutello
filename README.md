@@ -2,7 +2,7 @@
 
 > Find all dog daycare places in town
 
-My Hutello App helps the user find all dog daycare places in town. The user can create a detailed profile for them and one or more dogs. A search function lets the user search all places in a given city, provides detailed info for a single "HuTa" ("Hundetagesstätte" in German) and offers the possibility to send a request to a chosen HuTa.
+Hutello helps the user find all dog daycare places in town. The user can create a detailed profile for them and their dog(s) and search for "HuTas" ("Hundetagesstätten" in German) by city name. Detailed info for each HuTa can be viewed and it is planned to send a direct request for a free place.
 
 Screenshot of the Login page:
 
@@ -12,16 +12,15 @@ Screenshot of the Search page:
 
 ![Hutello_SearchPage](https://user-images.githubusercontent.com/82370319/124361509-ce70ba80-dc2f-11eb-9ccd-cec2d9426460.png)
 
+## Demo
+
+This app was programmed for mobile view. For a better view in your browser, open the development tools and switch to mobile view. Preferably in the format of an iPhone 6/7/8.
+
 ## Developing
 
-### Built With (work still in progress...)
+### Built With
 
-JavaScript ESNext, React 17, TypeScript, MongoDB, Cloudinary, Express.js, HTML5, CSS3, Node.js, Git Workflow, Adobe XD, Storybook,
-Visual Studio Code...
-
-## Api Reference
-
-More info coming soon...
+HTML5, CSS3, JavaScript ESNext, React 17, TypeScript, MongoDB, Cloudinary, Express, Node.js, Git Workflow, Adobe XD, Storybook, Vite, Visual Studio Code...
 
 ## Database
 
