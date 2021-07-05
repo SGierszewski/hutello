@@ -30,7 +30,6 @@ export default function SearchPage(): JSX.Element {
         {hutas?.map((huta) => {
           return (
             <li key={huta.name} className={styles.searchResults__item}>
-              {/* {huta.name} */}
               <SearchResultCard
                 name={huta.name}
                 streetName={huta.streetName}
