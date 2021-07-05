@@ -10,10 +10,10 @@ import RequestIcon from "../../components/Icons/RequestIcon";
 import WebIcon from "../../components/Icons/WebIcon";
 import styles from "./Details.module.css";
 import HutaLogo from "/src/app/assets/images/huta_logo.jpeg";
-import huta1 from "../../../../huta1.png";
-import huta2 from "../../../../huta2.jpeg";
-import huta3 from "../../../../huta3.jpeg";
-import huta4 from "../../../../huta4.jpeg";
+import huta1 from "/src/app/assets/images/hutaEx1.png";
+import huta2 from "/src/app/assets/images/huta2.jpeg";
+import huta3 from "/src/app/assets/images/huta3.jpeg";
+import huta4 from "/src/app/assets/images/huta4.jpeg";
 
 export default function Details(): JSX.Element {
   const [requestSend, setRequestSend] = useState(false);
