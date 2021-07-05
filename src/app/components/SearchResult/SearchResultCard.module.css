@@ -16,5 +16,6 @@ p {
 }
 
 .searchResult__favoriteIcon {
-  place-self: center;
+  justify-items: end;
+  align-self: center;
 }

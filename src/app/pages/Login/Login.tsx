@@ -53,7 +53,7 @@ function Login(): JSX.Element {
             required={true}
             onChange={setPassword}
           />
-          <IconButton title="Login">
+          <IconButton title="Login" onClick={() => history.push("/profile")}>
             <UserIcon />
           </IconButton>
           {errorMessage && (

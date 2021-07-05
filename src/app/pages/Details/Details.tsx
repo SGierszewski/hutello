@@ -9,6 +9,11 @@ import PhoneIcon from "../../components/Icons/PhoneIcon";
 import RequestIcon from "../../components/Icons/RequestIcon";
 import WebIcon from "../../components/Icons/WebIcon";
 import styles from "./Details.module.css";
+import HutaLogo from "/src/app/assets/images/huta_logo.jpeg";
+import huta1 from "/src/app/assets/images/hutaEx1.png";
+import huta2 from "/src/app/assets/images/huta2.jpeg";
+import huta3 from "/src/app/assets/images/huta3.jpeg";
+import huta4 from "/src/app/assets/images/huta4.jpeg";
 
 export default function Details(): JSX.Element {
   const [requestSend, setRequestSend] = useState(false);
@@ -25,11 +30,7 @@ export default function Details(): JSX.Element {
         <div className={styles.hutaDetails__card_header}>
           <FavoriteCheckbox icon={<FavoriteIcon />} value="favorite" />
           <h3 className={styles.hutaDetails__card_title}>Dog's Paradise</h3>
-          <img
-            className={styles.hutaDetails__img}
-            src="src/app/assets/images/huta_logo.png"
-            alt=""
-          />
+          <img className={styles.hutaDetails__img} src={HutaLogo} alt="" />
         </div>
         <IconButton onClick={handleClick} title="Send request">
           {<RequestIcon />}
@@ -60,10 +61,10 @@ export default function Details(): JSX.Element {
           möchten weitere Infos? Dann kontaktieren Sie uns gerne!
         </p>
         <section className={styles.hutaDetails__images}>
-          <img src="src/app/assets/images/huta_example1.png" alt="" />
-          <img src="src/app/assets/images/huta_example2.jpeg" alt="" />
-          <img src="src/app/assets/images/huta_example3.jpeg" alt="" />
-          <img src="src/app/assets/images/huta_example4.jpeg" alt="" />
+          <img src={huta1} alt="" />
+          <img src={huta2} alt="" />
+          <img src={huta3} alt="" />
+          <img src={huta4} alt="" />
         </section>
         <div className={styles.hutaDetails__contact}>
           <MailIcon />

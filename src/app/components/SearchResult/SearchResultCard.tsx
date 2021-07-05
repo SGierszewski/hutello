@@ -13,7 +13,9 @@ export default function SearchResultCard({
   return (
     <article className={styles.searchResult__card}>
       <div className={styles.searchResult__card_info}>
-        <h3>{name}</h3>
+        <a href="/details">
+          <h3>{name}</h3>
+        </a>
         <p>{streetName}</p>
         <p>
           {postcode} {city}

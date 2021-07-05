@@ -9,13 +9,13 @@ type SpeakingDogProps = {
 
 export default function SpeakingDog({ speech }: SpeakingDogProps): JSX.Element {
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.bubble}>
         <SpeechBubble speech={speech} />
       </div>
       <div className={styles.dog}>
         <LogoIcon />
       </div>
-    </>
+    </div>
   );
 }
