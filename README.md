@@ -65,4 +65,4 @@ HTML5, CSS3, JavaScript, React, TypeScript, MongoDB, Cloudinary, Express, Node.j
 
 ## Database
 
-All user data is stored in a MongoDB collection `users` upon registration. I didn't use an external API but created a dummy collection `hutas` in MongoDB from which the search results are fetched during search. For demo purposes, it is possible to search for the city "Köln".
+All user data is stored in a MongoDB collection `users` upon registration. I didn't use an external API but created a dummy collection `hutas` in MongoDB from which the search results are fetched during search. For demo purposes, it is possible to search for the cities "Köln" and "Bonn".
