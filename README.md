@@ -6,13 +6,7 @@ Hutello helps the user find all dog daycare places in town. The user can create 
 
 🚧 Hutello is still under construction...
 
-Screenshot of the Login page:
-
-![Hutello_LoginPage](https://user-images.githubusercontent.com/82370319/124361484-be58db00-dc2f-11eb-805c-a24261c88c15.png)
-
-Screenshot of the Search page:
-
-![Hutello_SearchPage](https://user-images.githubusercontent.com/82370319/124361509-ce70ba80-dc2f-11eb-9ccd-cec2d9426460.png)
+![Hutello_mockup](https://user-images.githubusercontent.com/82370319/126042418-05026d27-ed33-404a-8bec-4596ec520371.png)
 
 ## 💻 Demo
 
